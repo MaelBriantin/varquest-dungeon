@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/dice.png" type="image/x-icon">
+    <link href="http://fonts.cdnfonts.com/css/dungeon" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Donjon</title>
+</head>
+<body>  
+    <audio id="control" controls src="sound/Village.wav" loop></audio>
+    <div class="commencer" id="commencer">
+        <h1 class="titre">Varquest<hr>Dungeon</h1>
+        <div class="start" id="start">
+            start
+        </div>
+    </div>
+    <section class="main none" id="main">
+        <!----------------------------------------------HEADER---------------------------------------------------->
+        <div class="header none" id="header">
+            <div class="vie">
+                <h3>Santé</h3>
+                <hr>
+                <div class="hearts" id="vie"></div>
+            </div>
+            <div class="inventaire">
+                <h3>Inventaire</h3>
+                <hr>
+                <div class="items" id="items"></div>
+            </div>
+            <div class="menu" id="menu">
+                <h3 id="nameClass">Classe</h3>
+                <hr>
+                <div class="options" id="classe"></div>
+            </div>
+        </div>
+        <!----------------------------------------------CONTAINER---------------------------------------------------->
+        <div class="container" id="container">
+            <div class="animation" id="animation">
+                <div class="portrait" id="portrait"></div>
+                <div class="text" id="text"></div>
+            </div>
+            <div class="box" id="box">
+                <div class="question" id="question">
+                    
+                </div>
+                <div class="answer" id="answer">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+<!--    <script src="json/aventurier.json"></script>-->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

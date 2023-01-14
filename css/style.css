@@ -1,0 +1,361 @@
+@import url("http://fonts.cdnfonts.com/css/dungeon");
+@font-face {
+  font-family: "dungeon";
+  src: url("/fonts/DUNGRG__.TTF");
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #202020;
+  color: whitesmoke;
+}
+
+.titre {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: "dungeon", sans-serif;
+}
+
+.commencer {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.start {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  width: 30%;
+  height: 50px;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 600ms infinite alternate;
+}
+.start:hover {
+  animation-play-state: paused;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 100ms;
+}
+
+/*---------------------------------------HEADER---------------------------------------*/
+.header {
+  transition: transform 400ms ease-out;
+  transform: translateY(-400px);
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  text-transform: uppercase;
+  height: 15%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.vie, .menu {
+  width: 20%;
+}
+
+.inventaire {
+  width: 40%;
+}
+
+.inventaire, .vie, .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  transition: 400ms 800ms ease-out;
+}
+
+.options, .items, .hearts {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  transition: all 800ms ease-out;
+  transition-delay: 1500ms;
+}
+
+#nameClass {
+  transition: all 800ms ease-out;
+  transition-delay: 1500ms;
+}
+
+/*---------------------------------------MAIN---------------------------------------*/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.animation {
+  overflow: hidden;
+  height: 600px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+  margin-top: -200px;
+}
+
+.aventurier {
+  z-index: 2;
+  width: 500px;
+  height: 500px;
+}
+
+.timer {
+  margin: 0;
+  height: 100px;
+  justify-content: center;
+  font-size: 4rem;
+  color: red;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+  width: 50%;
+  gap: 15px;
+}
+
+.question {
+  animation: opacity 400ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 25px;
+  padding: 20px;
+  text-align: justify;
+  border: 1px solid whitesmoke;
+}
+
+.answer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+.answer__opt {
+  text-align: center;
+  font-size: 20px;
+  width: 40%;
+  height: 60px;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+}
+.answer__opt:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px 0 whitesmoke;
+}
+.answer__input {
+  all: unset;
+  text-align: center;
+  font-size: 20px;
+  width: 60%;
+  height: 60px;
+  border: 1px solid whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.appear {
+  transform: translateY(0);
+}
+
+button {
+  all: unset;
+}
+
+.continuer {
+  position: relative;
+  left: 40%;
+  text-align: center;
+  font-size: 20px;
+  width: 20%;
+  height: 40px;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 600ms infinite alternate;
+}
+.continuer:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.choc {
+  animation: choc 400ms;
+}
+
+.chute {
+  transform: translateY(100px) rotate(45deg);
+}
+
+.glissement {
+  transform: translateX(500px);
+}
+
+.none {
+  display: none;
+}
+
+@keyframes choc {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translate(50px, -50px);
+  }
+  50% {
+    transform: translate(-50px, 50px);
+  }
+  75% {
+    transform: translate(50px, -50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.white__flash {
+  background-color: whitesmoke;
+  color: whitesmoke;
+}
+
+.blue__flash {
+  background-color: #00bfff;
+}
+
+.red__flash {
+  background-color: #ff0000;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    height: 90vh;
+  }
+
+  .box {
+    width: 98%;
+  }
+
+  .titre {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .container {
+    margin: auto;
+    width: 98%;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    gap: 5px;
+  }
+
+  .answer__opt {
+    font-size: 20px;
+  }
+
+  .continuer {
+    font-size: 15px;
+  }
+
+  .animation {
+    height: 200px;
+    margin: 0;
+  }
+
+  .timer {
+    height: 80px;
+  }
+
+  .aventurier {
+    width: 300px;
+    height: 300px;
+  }
+
+  .commencer {
+    margin: auto;
+    padding-bottom: 150px;
+    width: 95%;
+  }
+
+  .header {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .hearts {
+    margin: auto;
+    width: 20px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
